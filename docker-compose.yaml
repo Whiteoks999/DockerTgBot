@@ -1,0 +1,10 @@
+version: '3'
+
+name: tgbot
+services:
+  any:
+    build:
+      context: .
+      dockerfile: ./dockerfile
+    restart: unless-stopped
+    command: [ "python3", "TgBot2.py" ]
